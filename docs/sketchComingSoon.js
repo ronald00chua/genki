@@ -5,6 +5,8 @@ function setup()
 {
     createCanvas(windowWidth, windowHeight);
 
+    frameRate(30);
+
     colors =
         [
             color(255,   0,   0),   // red
