@@ -34,14 +34,14 @@
     <radialGradient
        inkscape:collect="always"
        xlink:href="#linearGradient1008"
-       id="radialGradient1010"
-       cx="105"
-       cy="162.56825"
-       fx="105"
-       fy="162.56825"
-       r="61.935952"
-       gradientTransform="matrix(2.0984846,0,0,4.298956,-115.34088,-515.22196)"
-       gradientUnits="userSpaceOnUse" />
+       id="radialGradient1707"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7811445,0,0,3.56053,-82.688536,-437.76233)"
+       cx="106.43629"
+       cy="178.56253"
+       fx="106.43629"
+       fy="178.56253"
+       r="61.935952" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -51,8 +51,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="238.88183"
-     inkscape:cy="616.95303"
+     inkscape:cx="301.73897"
+     inkscape:cy="825.52446"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -71,7 +71,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -80,7 +80,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="opacity:0.5;fill:url(#radialGradient1010);stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       style="opacity:0.5;fill:url(#radialGradient1707);stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
        d="m 98.9526,65.030381 c -1.05758,6.83982 -5.29182,8.59888 -12.09538,15.78043 -6.80358,7.18155 -36.28564,38.553339 -41.57731,65.200669 -4.60767,23.20292 -1.51198,39.30938 4.53564,54.05045 3.72884,9.08904 19.10456,24.01398 33.35145,32.75459 8.85947,5.43537 17.62996,7.45611 21.83274,7.31118 4.2028,0.14493 12.97382,-1.87581 21.8333,-7.31118 14.24684,-8.74061 29.62258,-23.66555 33.35141,-32.75459 6.04762,-14.74107 9.14331,-30.84753 4.53564,-54.05045 -5.29167,-26.64733 -34.77375,-58.019119 -41.57732,-65.200669 -6.80357,-7.18155 -11.0378,-8.94061 -12.09538,-15.78043 -0.87976,-5.68977 -2.92735,-8.16535 -6.04763,-8.16531 -3.12027,4e-5 -5.16744,2.47573 -6.04716,8.16531 z"
        id="body"
        inkscape:connector-curvature="0"
