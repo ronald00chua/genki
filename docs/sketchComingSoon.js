@@ -71,6 +71,7 @@ function draw()
     ellipse(0, 0, ellipseWidth + glowRadius, ellipseHeight + glowRadius);
     fill(activeColor);
     ellipse(0, 0, ellipseWidth, ellipseHeight);
+    pop();
 }
 
 function windowResized() 
