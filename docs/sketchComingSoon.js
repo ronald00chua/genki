@@ -1,11 +1,23 @@
-var colors, colorIndex;
+var colors, colorIndex, color1, color2, activeColor;
 var lerpPos, lerpFoward;
+var imgGenkiTop;
+
+function preload()
+{
+    imgGenkiTop = loadImage('genki00_top.svg');
+    imgGenkiTopBody = loadImage('genki00_top_body.svg');
+    imgGenkiTopEyes = loadImage('genki00_top_eyes.svg');
+}
 
 function setup() 
 {
     createCanvas(windowWidth, windowHeight);
 
     frameRate(30);
+
+    imgGenkiTopBody.resize(height/2, 0);
+    imgGenkiTopEyes.resize(height/2, 0);
+
 
     colors =
         [
@@ -35,7 +47,7 @@ function draw()
 {
     background(0);
 
-    lerpPos += 0.01;
+    lerpPos += 0.05;
 
     if (lerpPos >= 1) {
         lerpPos = 0;
@@ -43,37 +55,19 @@ function draw()
         else colorIndex = 0;
     }
 
-    let color1 = colors[colorIndex];
-    let color2;
+    color1 = colors[colorIndex];
     if (colorIndex == colors.length - 1) color2 = colors[0];
     else color2 = colors[colorIndex + 1];
-    let activeColor = lerpColor(color1, color2, lerpPos);
-
-    let ellipseWidth = height / 20;
-    let ellipseHeight = height / 17;
-    let glowRadius = ellipseWidth / 5;
-    let glowColor = color(red(activeColor), green(activeColor), blue(activeColor), 100);
-
-    ellipseMode(CENTER);
-    noStroke();
+    activeColor = lerpColor(color1, color2, lerpPos);
 
     push();
-    translate(width / 2 - ellipseWidth, height / 2);
-    rotate(-5);
-    fill(glowColor);
-    ellipse(0, 0, ellipseWidth + glowRadius, ellipseHeight + glowRadius);
-    fill(activeColor);
-    ellipse(0, 0, ellipseWidth, ellipseHeight);
+    translate( width/2, height/2 );
+    imageMode(CENTER);
+    image(imgGenkiTopBody,0,0);
+    tint(activeColor);
+    image(imgGenkiTopEyes,0,0);
     pop();
 
-    push();
-    translate(width / 2 + ellipseWidth, height / 2);
-    rotate(5);
-    fill(glowColor);
-    ellipse(0, 0, ellipseWidth + glowRadius, ellipseHeight + glowRadius);
-    fill(activeColor);
-    ellipse(0, 0, ellipseWidth, ellipseHeight);
-    pop();
 }
 
 function windowResized() 
