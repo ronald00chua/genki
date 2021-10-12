@@ -1,10 +1,9 @@
 var colors, colorIndex, color1, color2, activeColor;
 var lerpPos, lerpFoward;
-var imgGenkiTop;
+var imgGenkiTopBody, imgGenkiTopEyes, imgScaleFactor;
 
 function preload()
 {
-    imgGenkiTop = loadImage('genki00_top.svg');
     imgGenkiTopBody = loadImage('genki00_top_body.svg');
     imgGenkiTopEyes = loadImage('genki00_top_eyes.svg');
 }
@@ -14,10 +13,6 @@ function setup()
     createCanvas(windowWidth, windowHeight);
 
     frameRate(30);
-
-    imgGenkiTopBody.resize(height/2, 0);
-    imgGenkiTopEyes.resize(height/2, 0);
-
 
     colors =
         [
@@ -41,6 +36,9 @@ function setup()
     lerpFoward = true;
 
     angleMode(DEGREES);
+
+    resizeImages();
+
 }
 
 function draw() 
@@ -63,9 +61,9 @@ function draw()
     push();
     translate( width/2, height/2 );
     imageMode(CENTER);
-    image(imgGenkiTopBody,0,0);
+    image(imgGenkiTopBody,0,0, imgGenkiTopBody.width * imgScaleFactor, imgGenkiTopBody.height * imgScaleFactor );
     tint(activeColor);
-    image(imgGenkiTopEyes,0,0);
+    image(imgGenkiTopEyes,0,0, imgGenkiTopBody.width * imgScaleFactor, imgGenkiTopBody.height * imgScaleFactor );
     pop();
 
 }
@@ -73,4 +71,11 @@ function draw()
 function windowResized() 
 {
     resizeCanvas(windowWidth, windowHeight);
+    resizeImages();
+}
+
+function resizeImages()
+{
+   let scaledImgHeight = height/2;
+   imgScaleFactor = scaledImgHeight/imgGenkiTopBody.height;
 }
