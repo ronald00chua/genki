@@ -52,7 +52,7 @@ function draw()
     let ellipseWidth = height / 20;
     let ellipseHeight = height / 17;
     let glowRadius = ellipseWidth / 5;
-    let glowColor = color(red(activeColor), green(activeColor), blue(activeColor), 50);
+    let glowColor = color(red(activeColor), green(activeColor), blue(activeColor), 100);
 
     ellipseMode(CENTER);
     noStroke();
